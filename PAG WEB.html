@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VENTA DE UNIFORMES Y CAMISETAS DEPORTIVAS</title>
+</head>
+<font size="5" color="blue"><h3>Fecha:</h3></font>
+<font size="5" color="blue">
+<script>
+    let date = new Date();
+    let output = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+    document.write("<h3>" + output + "</h3>");
+</script>
+</font>
+<body>
+    <h1>JC XPRESS SPORT</h1>
+    <font size="4"><em><h3><a href="#INFO1" style="color: green;">INFORMACIÓN 1</a></h3></em></font>
+    <font size="4"><em><h3><a href="#INFO2" style="color: green;">INFORMACIÓN 2</a></h3></em></font>
+    <font size="5" color="blue"><h3>Visitas:</h3></font>
+    <font size="5" color="blue"><h4 id="visitas"></h4></font>
+    <em><h3><p>Si desea conocer más acerca de este producto presione</h3><h2><a href="#" style="color: green;"> click en la siguiente imagen.</p></a></h2></em>
+    <a href="https://spanish.alibaba.com/g/wholesale-soccer-uniforms.html" target="_blank"><img src="./UNIFORMES/PORTADA.jpg"></a>
+    <font size="5" color="red"><h2>Menú Galerias:</h2></font>
+    <font size="5"><em><h3><a href="Galeria 1.html" style="color: green;" target="_blank">Galeria 1: Diseños de ropa deportiva</a></h3></em></font>
+    <font size="5"><em><h3><a href="Galeria 2.html" style="color: green;">Galeria 2: Diseños de ropa deportiva</a></h3></em></font>
+
+    <main>
+    <font size="5" color="red"><h2><p>Apartados:</p></h2></font>
+    </main>
+    <ul>
+    <font size="5" color="red"><u><h4><li id="INFO1">INFORMACIÓN 1:</li></h4></u></font>
+    <h3><p>En este apartado podrás encontrar imagenes de uniformes y ventas de estos en diferentes tiendas, también algunos
+        de sus formas personalizadas o manera de tenerlos a tu propio estilo.</p></h3>
+    <font size="5" color="red"><u><h4><li id="INFO2">INFORMACIÓN 2:</li></h4></u></font>
+    <h3><p>En este apartado encontraremos prendas deportivas medias, pantalonetas y camisas de equipos deportivos con el fin
+        insitar a la compra de estos productos con tu estilo personalizado y nombre, para que disfrutes de este deporte.</p></h3>
+    </ul>
+    <font size="4" color="red"><h2>LINKS DE INTERÉS:</h2></font>
+    <font size="5"><em><h3><a href="https://www.amazon.com/-/es/Uniformes-camisetas-sublimaci%C3%B3n-personalizados-profesional/dp/B081V75MS4" style="color: green;" target="_blank">Amazon</a></h3></em></font>
+    <font size="5"><em><h3><a href="https://es.aliexpress.com/w/wholesale-uniformes-de-futbol.html" style="color: green;" target="_blank">Aliexpress</a></h3></em></font>
+    <font size="5"><em><h3><a href="Galeria 3.html" style="color: green;" target="_blank">Galeria 3: Productos que te pueden interesar</a></h3></em></font>
+
+    <script>
+        let visitasActuales = localStorage.getItem("visitas");
+        if (visitasActuales){
+          let aumento = parseInt(visitasActuales) + 1;
+          document.getElementById("visitas").innerHTML = aumento;
+          localStorage.setItem("visitas", aumento);
+        }else{
+          localStorage.setItem("visitas", 0);
+          document.getElementById("visitas").innerHTML = 0;
+        }
+      </script>
+
+</body>
+</html>
